@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Header with Adjusted Search Bar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    /* Smooth transition for off-canvas menu */
+    .menu-transition {
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="bg-[#ffc125] shadow-md">
+    <!-- Top Header -->
+    <div class="flex items-center justify-between px-4 py-3 md:px-8">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="https://via.placeholder.com/40" alt="Logo" class="w-10 h-10">
+        <span class="text-lg font-bold">Second-Life</span>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="hidden md:flex flex-1 justify-center">
+        <input
+          type="text"
+          placeholder="Search..."
+          class="w-1/2 max-w-xs px-3 py-3 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <!-- Profile and Hamburger Menu -->
+      <div class="flex items-center space-x-4">
+        <!-- Hamburger Icon -->
+        <button
+          id="menu-btn"
+          class="block md:hidden focus:outline-none"
+          aria-label="Toggle menu"
+        >
+          <svg
+            class="w-8 h-8 text-gray-700"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <!-- Profile -->
+        <img
+          src="https://via.placeholder.com/40"
+          alt="Profile"
+          class="w-10 h-10 rounded-full border"
+        />
+      </div>
+    </div>
+
+    <!-- Desktop Navbar -->
+    <!-- <nav class="hidden md:flex justify-start bg-white border-2 border-b-[#1f5514]">
+      <ul class="flex space-x-8 py-3 px-4">
+        <li>
+          <a href="#" class="text-gray-700 hover:text-blue-500">Home</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-700 hover:text-blue-500">About</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-700 hover:text-blue-500">Contact</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-700 hover:text-blue-500">Product</a>
+        </li>
+      </ul>
+    </nav> -->
+    <nav class="hidden md:flex justify-start bg-white border-2 border-b-[#ffc125]">
+        <ul class="flex space-x-8 py-3 px-4">
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 hover:text-white border-2 border-transparent hover:bg-[#1f5514] active:text-[#ffc125] active:border-[#ffc125] rounded-lg transition-all duration-300 ease-in-out px-4 py-2"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 hover:text-white border-2 border-transparent hover:bg-[#1f5514] active:text-[#ffc125] active:border-[#ffc125] rounded-lg transition-all duration-300 ease-in-out px-4 py-2"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 hover:text-white border-2 border-transparent hover:bg-[#1f5514] active:text-[#ffc125] active:border-[#ffc125] rounded-lg transition-all duration-300 ease-in-out px-4 py-2"
+            >
+              Contact
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 hover:text-white border-2 border-transparent hover:bg-[#1f5514] active:text-[#ffc125] active:border-[#ffc125] rounded-lg transition-all duration-300 ease-in-out px-4 py-2"
+            >
+              Product
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+  </header>
+
+  <!-- Off-Canvas Menu (Mobile) -->
+  <div
+    id="offcanvas-menu"
+    class="rounded-r-lg fixed top-0 left-0 z-50 w-1/2 h-full bg-white transform -translate-x-full menu-transition md:hidden"
+  >
+    <nav class="flex flex-col space-y-4 p-4">
+      <a href="#" class=" border-2  text-gray-700 hover:text-white border-2 border-transparent hover:bg-[#1f5514] active:text-[#ffc125] active:border-[#ffc125] rounded-lg transition-all duration-300 ease-in-out px-4 py-1">Home</a>
+      <a href="#" class="text-gray-700 hover:text-white border-2 border-transparent hover:bg-[#1f5514] active:text-[#ffc125] active:border-[#ffc125] rounded-lg transition-all duration-300 ease-in-out px-4 py-1">About</a>
+      <a href="#" class="text-gray-700 hover:text-white border-2 border-transparent hover:bg-[#1f5514] active:text-[#ffc125] active:border-[#ffc125] rounded-lg transition-all duration-300 ease-in-out px-4 py-1">Contact</a>
+      <a href="#" class="text-gray-700 hover:text-white border-2 border-transparent hover:bg-[#1f5514] active:text-[#ffc125] active:border-[#ffc125] rounded-lg transition-all duration-300 ease-in-out px-4 py-1">Product</a>
+    </nav>
+  </div>
+
+  <!-- Overlay for Menu -->
+  <!-- <div
+    id="overlay"
+    class="fixed inset-0 z-40 bg-gray-100  hidden md:hidden"
+  ></div> -->
+
+  <!-- Main Content -->
+  <main class="p-0">
+    <section class="absolute inset-0 flex flex-col items-center justify-center z-10 text-white text-center p-5">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Welcome to Our Website</h1>
+        <p class="text-lg md:text-xl lg:text-2xl mb-6">Your success starts here. Discover more below.</p>
+        <button onclick="alert('Button Clicked!')" 
+            class="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white text-lg rounded-md transition duration-300">
+            Get Started
+        </button>
+    </section>
+
+    <!-- Swiper container -->
+    <div class="swiper bg-yellow-300 w-full h-3/6">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide flex justify-center items-center">
+                <div class="flex items-center justify-center w-full h-screen bg-aqua">
+                    <img src="image1.jpg" alt="Slide 1" class="w-full h-screen object-cover">
+                </div>
+            </div>
+            <div class="swiper-slide flex justify-center items-center">
+                <div class="flex items-center justify-center w-full h-screen bg-aqua">
+                    <img src="image2.jpg" alt="Slide 2" class="w-full h-screen object-cover">
+                </div>
+            </div>
+            <div class="swiper-slide flex justify-center items-center">
+                <div class="flex items-center justify-center w-full h-screen bg-aqua">
+                    <img src="image1.jpg" alt="Slide 3" class="w-full h-screen object-cover">
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation Buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+  </main>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const offcanvasMenu = document.getElementById('offcanvas-menu');
+    const overlay = document.getElementById('overlay');
+
+    menuBtn.addEventListener('click', () => {
+      offcanvasMenu.classList.toggle('-translate-x-full');
+      overlay.classList.toggle('hidden');
+    });
+
+    overlay.addEventListener('click', () => {
+      offcanvasMenu.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+  </script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    // Initialize Swiper
+    let swiper = new Swiper('.swiper', {
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next', // Correct selectors for navigation
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+</body>
+</html>

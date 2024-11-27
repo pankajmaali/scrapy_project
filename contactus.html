@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <section>
+    <div class="container mx-auto px-4 py-8">
+      <!-- Contact Us Heading -->
+      <h1 class="text-4xl font-bold text-center mb-6">Contact Us</h1>
+      <p class="text-center text-gray-600 mb-8">
+        We'd love to hear from you! Please fill out the form below, and we'll get back to you soon.
+      </p>
+
+      <!-- Main Section: Form and Content -->
+      <div class="flex flex-col md:flex-row gap-8">
+        <!-- Right Side Form (70% width) -->
+        <div class="w-full md:w-7/10 bg-white shadow-lg rounded-lg p-6">
+          <form action="#" method="POST" class="space-y-6">
+            <!-- Email and Number Fields -->
+            <div class="flex flex-col md:flex-row gap-6">
+              <input type="email" placeholder="Your Email"
+                class="w-full md:w-1/2 bg-[#c7d5da] px-4 py-2 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required />
+              <input type="tel" placeholder="Your Phone Number"
+                class="w-full md:w-1/2 px-4  bg-[#c7d5da] py-2 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required />
+            </div>
+            <!-- Name Field -->
+            <input type="text" placeholder="Your Name"
+              class="w-full px-4 py-2 border bg-[#c7d5da] rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required />
+            <!-- Message Field -->
+            <textarea placeholder="Your Message" rows="4"
+              class="w-full px-4 py-2 border  bg-[#c7d5da] rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required></textarea>
+            <!-- Submit Button -->
+            <button type="submit"
+              class="w-1/4 bg-[#1f5514] text-white font-bold py-2 rounded-3xl hover:bg-[#216212] transition duration-300">
+              Submit
+            </button>
+          </form>
+        </div>
+
+      
+        <div class="w-full md:w-3/10 bg-[#c7d5da] shadow-lg rounded-2xl p-6 relative overflow-hidden">
+          <!-- Background image -->
+          <div class="absolute inset-0 bg-[url('girl.jpg')] bg-cover bg-center opacity-15"></div>
+
+          <!-- Content -->
+          <div class="space-y-4 relative z-10">
+            <div>
+              <h2 class="text-xl font-semibold py-4">Get in Touch</h2>
+              <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam a itaque aut cum,
+                quia odio asperiores. Veniam atque consequuntur consequatur!</p>
+            </div>
+
+            <div>
+              <input type="email" placeholder="Your Email"
+                class="w-1/2 md:w-full bg-white px-4 py-2 mt-6 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required />
+              <button type="submit"
+                class="w-full bg-[#1f5514] text-white font-bold py-2 mt-4 rounded-xl md:rounded-3xl hover:bg-[#216212] transition duration-300">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    </div>
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5 max-w-6xl mx-auto">
+      <div class="bg-[#83a3ad]  rounded-2xl shadow-lg overflow-hidden flex flex-col p-5">
+        <!-- Top Section with Icon -->
+        <div class="text-center">
+          <i class="fa-solid fa-sim-card text-4xl text-gray-800 "></i>
+        </div>
+      
+        <!-- Icon Name Next to Text -->
+        <div class="mt-4 flex items-center justify-center">
+          <span class="text-black text-lg font-semibold">(+91) 7415938964</span>
+        </div>
+      
+        <!-- Bottom Section with Limited Text -->
+        <p class="text-gray-700 text-center mt-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis facere
+          autem praesentium aperiam similique alias. Et labore obcaecati error?
+        </p>
+      </div>
+
+
+        <div class="bg-[#c7d5da] rounded-2xl shadow-lg overflow-hidden flex flex-col p-5">
+          <!-- Top Section with Icon -->
+          <div class="text-center">
+            <i class="fa-regular fa-envelope text-4xl text-gray-800"></i>
+          </div>
+        
+          <!-- Icon Name Next to Text -->
+          <div class="mt-4 flex items-center justify-center">
+            <span class="text-black text-lg font-semibold">@example.com</span>
+          </div>
+        
+          <!-- Bottom Section with Limited Text -->
+          <p class="text-gray-700 text-center mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis facere
+            autem praesentium aperiam similique alias. Et labore obcaecati error?
+          </p>
+        </div>
+        
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col p-5">
+        <!-- Top Section with Icon -->
+        <div class="text-center">
+          <i class="fa-solid fa-location-dot text-4xl text-gray-800"></i>
+          
+        </div>
+      
+        <!-- Icon Name Next to Text -->
+        <div class="mt-4 flex items-center justify-center">
+          <span class="text-black text-lg font-semibold">@example.com</span>
+        </div>
+      
+        <!-- Bottom Section with Limited Text -->
+        <p class="text-gray-700 text-center mt-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit debitis facere
+          autem praesentium aperiam similique alias. Et labore obcaecati error?
+        </p>
+      </div>
+    </section>
+
+    <!-- Google Map Section -->
+    <div class="mt-8">
+      <h2 class="text-2xl font-bold text-center mb-4">Find Us Here</h2>
+      <div class="w-full h-96">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086081493919!2d144.95373511531665!3d-37.81621897975186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d452f7b77ab%3A0x2a1f701a0e88a49f!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1690030241705!5m2!1sen!2sau"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+    </div>
+  </section>
+</body>
+
+</html>
